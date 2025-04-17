@@ -41,6 +41,20 @@ streamlit run bg_remover.py
 
 The application will open in your default web browser at http://localhost:8501.
 
+## Deployment
+
+To deploy this application on Streamlit Cloud or other platforms:
+
+1. Make sure both `requirements.txt` and `packages.txt` are in your repository
+2. The `requirements.txt` file contains all Python dependencies
+3. The `packages.txt` file contains system dependencies needed by OpenCV and rembg
+4. For Streamlit Cloud:
+   - Connect your GitHub repository
+   - Select the `bg_remover.py` as the main file
+   - Deploy the app
+
+If you encounter any dependency errors during deployment, check the logs for specific missing packages.
+
 ## How It Works
 
 This application uses the [rembg](https://github.com/danielgatis/rembg) library, which is built on deep learning models specialized in image segmentation. The process includes:
@@ -56,6 +70,7 @@ This application uses the [rembg](https://github.com/danielgatis/rembg) library,
 - rembg
 - Pillow
 - numpy
+- onnxruntime
 
 ## Limitations
 
